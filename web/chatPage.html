@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="chatScript.js"></script>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body onload="startRefreshFunctions()" style="color:#878992;background:#e7f5de;">
+
+    <div id="firstScreen" style="align-content: center;text-align: center;display: inline-block;
+    width: 90%;">
+        <br>
+        <br>
+        <label id="test" style="font-size:20px">Message Content:</label><br>
+        <input id="uMessage" type="text" style="width: 30%;" /><br><br>
+        <button onclick="sendMessage()">Send Message</button>
+        <button onclick="logout()">Logout</button>
+        <br>
+    </div>
+    <div style="display:inline-block;border-width:2px">
+        <p style="font-size:20px">Users Online:</p>
+        <ul id="usersList" style="border:2px;float:right;font-size:20px">
+
+        </ul>
+    </div>
+    <div id="secondScreen">
+        <h2 style="text-align: center;">Messages</h2>
+
+        <table id="messagesTable" style="text-align: center;align-content: center">
+            <col width="10%">
+            <col width="90%">
+            <tr>
+                <th style="text-align: center;">Name</th>
+                <th style="text-align: center;">Message</th>
+            </tr>
+
+            <tbody id="tableRows">
+                <tr>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</body>
+
+</html>
